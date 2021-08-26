@@ -76,6 +76,7 @@ plugins: Dict[str, Set[str]] = {
     },
     # Source plugins
     "athena": sql_common | {"PyAthena[SQLAlchemy]"},
+    "metadata-business-glossary": set(),
     "bigquery": sql_common | {"pybigquery >= 0.6.0"},
     "bigquery-usage": {"google-cloud-logging", "cachetools"},
     "dbt": set(),
@@ -230,6 +231,7 @@ entry_points = {
         "ldap = datahub.ingestion.source.ldap:LDAPSource",
         "looker = datahub.ingestion.source.looker:LookerDashboardSource",
         "lookml = datahub.ingestion.source.lookml:LookMLSource",
+        "metadata-business-glossary = datahub.ingestion.source.metadata.business_glossary:BusinessGlossaryFileSource",
         "mongodb = datahub.ingestion.source.mongodb:MongoDBSource",
         "mssql = datahub.ingestion.source.sql.mssql:SQLServerSource",
         "mysql = datahub.ingestion.source.sql.mysql:MySQLSource",
