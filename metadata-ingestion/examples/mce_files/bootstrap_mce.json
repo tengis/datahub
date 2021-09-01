@@ -114,6 +114,21 @@
             }
           },
           {
+            "com.linkedin.pegasus2avro.common.GlobalTags": {
+              "tags": [{ "tag": "urn:li:tag:account"}, { "tag": "urn:li:tag:operational"}]
+            }
+          },
+          {
+            "com.linkedin.pegasus2avro.common.GlossaryTerms": {
+              "terms": [{ "urn": "urn:li:glossaryTerm:ClientsAndAccounts.Account"}],
+              "auditStamp": {
+                "time": 1630482914,
+                "actor": "urn:li:corpuser:mjames",
+                "impersonator": null
+              }
+            }
+          },
+          {
             "com.linkedin.pegasus2avro.dataset.DatasetProperties": {
               "description": null,
               "uri": null,
@@ -222,7 +237,17 @@
                   "globalTags": {
                     "tags": [{ "tag": "urn:li:tag:NeedsDocumentation" }]
                   },
-                  "recursive": false
+                  "recursive": false,
+                  "glossaryTerms": {
+                      "com.linkedin.pegasus2avro.common.GlossaryTerms": {
+                        "terms": [{ "urn": "urn:li:glossaryTerm:PersonalInformation.Email"}],
+                        "auditStamp": {
+                          "time": 1630482914,
+                          "actor": "urn:li:corpuser:jdoe",
+                          "impersonator": null
+                        }
+                      }
+                  }
                 },
                 {
                   "fieldPath": "[version=2.0].[type=boolean].field_bar",
